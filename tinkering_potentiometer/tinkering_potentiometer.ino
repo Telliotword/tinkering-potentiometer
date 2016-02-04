@@ -10,7 +10,10 @@
 
 // The potentiometer is on port A2
 #define   POTENTIOMETER   A2
-
+#define   SPEAKER 5
+#define NOTE_G1  49
+#define NOTE_B1  62
+#define NOTE_A1  55
 void setup() {
   // Sets the potentiometer port to "INPUT"
   pinMode(POTENTIOMETER, INPUT);
@@ -25,7 +28,11 @@ void loop() {
 
   // Prints the current reading
   Serial.println(value);
+tone(SPEAKER, value);
 
   // waits
+  
+  
   delay(100);
+  
 }
